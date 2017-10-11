@@ -1,7 +1,6 @@
 var Stack = function() {
   var someInstance = {};
 
-//add Jeff
   // Use an object with numeric keys to store values
   var storage = {};
 
@@ -10,22 +9,21 @@ var Stack = function() {
     
     //index is the number of key-value pairs in the storage object, which is the index to push value parameter into
     var index = Object.keys(storage).length;
-    // console.log('index ', index);
-    // console.log('storage ', storage);
 
     storage[index] = value;
 
-    // console.log(storage);
+    return storage[index];
 
-    //should return the new length?
-    // return storage;
   };
 
   someInstance.pop = function() {
     var index = Object.keys(storage).length;
-    // console.log('pop ')
-    
-    delete storage[index];    
+    var popped = storage[index - 1];
+
+    delete storage[index - 1]; 
+
+    return popped; 
+       
   };
 
   someInstance.size = function() {
