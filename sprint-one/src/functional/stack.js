@@ -1,6 +1,7 @@
 var Stack = function() {
   var someInstance = {};
 
+//add Jeff
   // Use an object with numeric keys to store values
   var storage = {};
 
