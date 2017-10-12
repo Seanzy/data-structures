@@ -20,13 +20,13 @@ queueMethods.size = function() {
 }
 
 queueMethods.enqueue = function(value) {
-  var index = Object.keys(this.storage).length;
+  // var index = Object.keys(this.storage).length;
   // if (index === 0) {
   //   this.storage[index] = value;
   // } else {
   //   for (var key in this.storage) {
   //     this.storage[key] = this.storage[key + 1]
-  for (var i = Object.keys(this.storage).length; i > 0; i--) {
+  for (var i = this.size(); i > 0; i--) {
       this.storage[i] = this.storage[i - 1];
   }   
   this.storage[0] = value;
