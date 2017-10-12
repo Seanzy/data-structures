@@ -17,11 +17,11 @@ var stackMethods = {
     if (Object.keys(this.storage).length === 0) {
       this.storage[0] = value;
     } else {
-        for (var i = Object.keys(this.storage).length; i > 0; i--) {
-          this.storage[i] = this.storage[i - 1];
-        }
+      for (var i = Object.keys(this.storage).length; i > 0; i--) {
+        this.storage[i] = this.storage[i - 1];
+      }
 
-        this.storage[0] = value;
+      this.storage[0] = value;
     }
   },
   pop: function() {

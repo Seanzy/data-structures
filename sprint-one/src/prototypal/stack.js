@@ -13,13 +13,13 @@ var stackMethods = {};
 
 stackMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
 
 stackMethods.push = function(value) {
 //we used this.size instead of Object.keys(this.storage).length;
   var index = this.size();
   this.storage[index] = value;
-}
+};
 
 stackMethods.pop = function() {
   var popped = this.storage[this.size() - 1];
@@ -27,7 +27,7 @@ stackMethods.pop = function() {
   delete this.storage[this.size() - 1];
 
   return popped;
-}
+};
 
 
 

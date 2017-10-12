@@ -17,10 +17,10 @@ queueMethods.size = function() {
 
 queueMethods.enqueue = function(value) {
   for (var i = this.size(); i > 0; i--) {
-        this.storage[i] = this.storage[i - 1];
-  };
+    this.storage[i] = this.storage[i - 1];
+  }
    
-    this.storage[0] = value;
+  this.storage[0] = value;
 };
 
 queueMethods.dequeue = function() {
@@ -29,5 +29,5 @@ queueMethods.dequeue = function() {
   delete this.storage[this.size() - 1];
 
   return removed; 
-}
+};
 

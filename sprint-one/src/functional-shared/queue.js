@@ -17,7 +17,7 @@ var queueMethods = {
 
 queueMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
 
 queueMethods.enqueue = function(value) {
   // var index = Object.keys(this.storage).length;
@@ -27,14 +27,14 @@ queueMethods.enqueue = function(value) {
   //   for (var key in this.storage) {
   //     this.storage[key] = this.storage[key + 1]
   for (var i = this.size(); i > 0; i--) {
-      this.storage[i] = this.storage[i - 1];
+    this.storage[i] = this.storage[i - 1];
   }   
   this.storage[0] = value;
-}
+};
 
 queueMethods.dequeue = function() {
-  var removed = this.storage[Object.keys(this.storage).length - 1]
+  var removed = this.storage[Object.keys(this.storage).length - 1];
   
-  delete this.storage[Object.keys(this.storage).length - 1]
+  delete this.storage[Object.keys(this.storage).length - 1];
   return removed;
-}
+};
