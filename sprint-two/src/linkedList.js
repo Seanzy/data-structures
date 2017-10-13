@@ -4,7 +4,7 @@ var LinkedList = function() {
   list.tail = null;
 
   list.addToTail = function(value) {
-    console.log('value ' + value);
+    // console.log('value ' + value);
     var newNode = new Node(value);
     
     if (list.head === null) {
