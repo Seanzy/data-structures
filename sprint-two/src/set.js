@@ -2,7 +2,7 @@ var Set = function() {
   var set = Object.create(setPrototype);
   set._storage = []; // fix me
   
-  console.log(set);
+  // console.log(set);
   return set;
 };
 
