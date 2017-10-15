@@ -33,15 +33,28 @@ binaryTreeMethods.insert = function(insertValue) {
 };
 
 binaryTreeMethods.contains = function(value) {
+  // console.log("contains this:", this)
   var recursiveContains = function(node) {
-    if (value === node.value || value === node.left.value || value === node.right.value) {
+    // console.log("rC, ", node);
+    // debugger
+    if (value === node.value) {
       return true;
-    } else if (node.left === null && node.right === null) {
-      return false;
-    } else if (node.left !== null && value < node.value) {
-      
+    } else if (value < node.value) {
+      // check if left is null
+      if (node.left === null) {
+        return false;
+      } else {
+        return recursiveContains(node.left);
+      }
+    } else { // if value is greater than node.value
+        if (node.right === null) {
+          return false;
+        } else {
+          return recursiveContains(node.right);
+        }
     }
-  }
+  };
+  return recursiveContains(this);
   
 };
 
