@@ -59,6 +59,17 @@ binaryTreeMethods.contains = function(value) {
 };
 
 binaryTreeMethods.depthFirstLog = function(cb) {
+  var recursiveDepthFirstLog = function(node) {
+    cb(node.value);
+    if (node.left !== null) {
+      recursiveDepthFirstLog(node.left);
+    }
+    if (node.right !== null) {
+      recursiveDepthFirstLog(node.right);
+    }
+  };
+  
+  recursiveDepthFirstLog(this);
   
 };
 
