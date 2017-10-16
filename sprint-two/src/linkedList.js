@@ -4,7 +4,6 @@ var LinkedList = function() {
   list.tail = null;
 
   list.addToTail = function(value) {
-    // console.log('value ' + value);
     var newNode = new Node(value);
     
     if (list.head === null) {
@@ -30,26 +29,6 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-    
-  //   for (var key in list) {
-  //     var node = list[key];
-      
-  //     if (node.value === target) {
-  //       return true;
-  //     }
-  //   }
-    
-  //   return false;
-  // };
-  // var node = list.head
-  // var isItTarget = false
-  // while (node.next !== null) {
-  //   if(node.value === target) {
-  //     isItTarget = true;
-  //   }
-  // }
-  // return isItTarget
-  // return list;
   
   //recursive contains() function 
   var checkTarget = function(LLobj, target) {
